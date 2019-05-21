@@ -1,0 +1,343 @@
+$colorBlue: #003459
+$colorYellow: #FCE38A
+$colorGreen: #02C39A
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+  
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+*
+  // border: 1px solid #000
+  font-family: 微軟正黑體
+body
+  padding: 20px
+  margin: 0
+  display: flex
+  justify-content: center
+  background-color: $colorBlue
+hr
+  border-color: $colorYellow
+.data
+  padding-left: 0
+  font-size: 25px
+  margin-bottom: 0
+  li
+    margin-top: 10px
+    font-size: 18px
+h4
+  color: rgba(255,255,255,0.5)
+  margin-top: 60px
+  margin-bottom: 0
+h5
+  font-size: 16px
+  margin: 0
+  
+h2
+  margin-bottom: 40px
+  font-weight: 700
+  margin-top: 0
+  &:after
+    content: ""
+    display: inline-block
+    +size(30px,7px)
+    background-color: $colorYellow
+    margin-left: 10px
+p
+  letter-spacing: 2px
+.coffee
+  +size(30px,30px)
+  position: absolute
+  left: 10px
+  top: 10px
+.namePic
+  +size(180px,200px)
+  // transform: rotate(90deg)
+  border-radius: 20px
+.skill_detail
+  margin-bottom: 0
+.resume
+  display: flex
+  padding: 30px
+  border: solid 10px rgba(white,0.8)
+  color: rgba(255,255,255,1)
+  max-width: 900px
+  position: relative
+  .left
+      flex: 5
+      padding: 20px
+      border-right: solid 2px $colorYellow
+  .right
+      flex: 7
+      padding: 20px
+  li
+    list-style: none
+  a
+    position: relative
+    text-decoration: none
+    padding: 15px 15px 15px 45px
+    background-color: $colorYellow
+    margin: 10px
+    color: black
+    transition: 0.5s
+    font-weight: bold
+    font-size: 15px
+    border-radius: 10px
+    margin-left: 5px
+    &:hover
+      background-color: $colorGreen
+      color: white
+  .skill
+    padding-left: 0
+    
+    ul
+      display: flex
+      justify-content: center
+      width: 100%
+      padding-left: 0
+      li
+        width: 33%
+        text-align: center
+        +flexCenter
+        flex-direction: column
+        padding-top: 0
+        justify-content: center
+        
+      .circle
+        position: relative
+        +size(80px)
+        +flexCenter
+        margin-top: 10px
+      h5
+        margin-top: 0px        
+      .outerCircle
+        +size(60px)
+        background-color: $colorYellow
+        border-radius: 50%
+        position: absolute
+        z-index: 5
+        .p90
+          position: absolute
+          background-color: rgba($colorBlue,0.8)
+          +size(50%)
+          left: 50%
+          top: 0
+        .p180
+          position: absolute
+          background-color: rgba($colorBlue,0.8)
+          +size(50%)
+          left: 50%
+          top: 50%
+        .p270
+          position: absolute
+          background-color: rgba($colorBlue,0.8)
+          +size(50%)
+          left: 0%
+          top: 50%
+        .p360
+          position: absolute
+          background-color: rgba($colorBlue,0.8)
+          +size(50%)
+          left: 0%
+          top: 0%
+
+      .innerCircle
+        +size(40px)
+        background-color: $colorBlue
+        border-radius: 50%
+        z-index: 10
+        position: absolute
+  .pgSkill
+    ul
+      // display: flex
+    
+    li
+      width: 100%
+      display: flex
+      position: relative
+      
+      .bar
+        +size(150px,8px)
+        // background-color: $colorYellow
+        border: solid 2px $colorYellow
+        border-radius: 4px
+        position: absolute
+        right: 0px
+        background-color: rgba($colorBlue,0.8)
+        top: 50%
+        transform: translate(0%,-50%)
+        .value
+          +size(60%,8px)
+          background-color: $colorYellow
+          &.w90
+            width: 90%
+          &.w70
+            width: 70%
+          &.w60
+            width: 60%
+          &.w50
+            width: 50%
+   
+            
+  .experience
+    width: 100%
+    margin-top: 240px
+    .itemUl
+      width: 100%
+      padding-left: 0
+    .item
+      display: flex
+      width: 100%
+      .count
+        border-right: solid 3px $colorYellow
+        width: 15%
+        margin: 10px
+        &.one
+          border-right: solid 3px #02C39A
+        &.two
+          border-right: solid 3px #028090
+        &.three
+          border-right: solid 3px $colorYellow
+        
+  .decoration
+    +size(300px,140px)
+    background: linear-gradient(135deg,$colorYellow,white)
+    border-radius: 70px 0px 0px 70px
+    position: absolute
+    right: 0
+   
+.face
+  +size(80px)
+  background-color: $colorYellow
+  border-radius: 50%
+  position: absolute
+  right: 5%
+  transition: 0.5s
+  margin-top: 180px
+  .eye
+    +size(30px)
+    border-radius: 50%
+    background-color: white
+    position: absolute
+    &.eyeLeft
+      left: 5%
+      top: 25%
+    &.eyeRight
+      right: 5%
+      top: 25%
+    .eyeball
+      +size(10px)
+      background-color: black
+      border-radius: 50%
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      transition: 0.5s
+      &.moveLeft
+        transform: translate(80%,-50%)
+      &.moveRight
+        transform: translate(-120%,-50%)
+  .mouth
+    +size(30px,10px)
+    background-color: $colorBlue
+    border-radius: 25% 25% 100% 100%
+    position: absolute
+    left: 50%
+    transform: translate(-50%,0%)
+    bottom: 10%
+    overflow: hidden
+  .hair
+    background-color: black
+    +size(50px,20px)
+    border-radius: 50%
+    position: absolute
+    &.hairLeft
+      left: 0%
+      top: 0%
+    &.hairRight
+      right: 0%
+      top: 0%
+    &.hairTop
+      left: 50%
+      transform: translate(-50%,0%)
+      top: -10%
+        
+.thank
+  position: absolute
+  font-size: 50px
+  color: $colorYellow
+  margin-top: 200px
+  right: 15%
+  
+  
+.pageLoading
+  position: fixed
+  +size(100%)
+  background-color: $colorYellow
+  left: 0
+  top: 0  
+  z-index: 100
+  +flexCenter
+  transition: 0.5s 0.5s
+  pointer-events: none
+  &.complete
+    opacity: 0
+    .fadeOut
+      transform: scale(0.01) translate(-50%,0%)
+      // transform: translate(-50%,0%)
+    
+  .face
+    background-color: $colorBlue
+    margin-top: 50px
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    transition: 0.5s
+    // +size(120px)
+    .mouth
+      background-color: $colorYellow
+    .eyeball
+      @keyframes moving
+        0%
+          transform: translate(-140%,-50%)
+        10%
+          transform: translate(-140%,-50%)
+        90%
+          transform: translate(60%,-50%)
+        100%
+          transform: translate(60%,-50%)
+      animation: moving 2s infinite alternate
+  .loading
+    +size(200px,8px)
+    background-color: white
+    // border: 1px solid #eee
+    margin-top: 300px
+    border-radius: 4px
+    overflow: hidden
+    .loadingBar
+      +size(60%,100%)
+      background-color: $colorBlue
+    
+      
+
+
+      
+        
+        
+        
+    
+    
+    
+  
+    
+    
+  
+  
+
+  
+  

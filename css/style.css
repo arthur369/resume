@@ -1,0 +1,401 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+body {
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #003459;
+}
+
+hr {
+  border-color: #FCE38A;
+}
+
+.data {
+  padding-left: 0;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+.data li {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+h4 {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-weight: 700;
+  margin-top: 0;
+}
+h2:after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 7px;
+  background-color: #FCE38A;
+  margin-left: 10px;
+}
+
+p {
+  letter-spacing: 2px;
+}
+
+.coffee {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.namePic {
+  width: 180px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.skill_detail {
+  margin-bottom: 0;
+}
+
+.resume {
+  display: flex;
+  padding: 30px;
+  border: solid 10px rgba(255, 255, 255, 0.8);
+  color: white;
+  max-width: 900px;
+  position: relative;
+}
+.resume .left {
+  flex: 5;
+  padding: 20px;
+  border-right: solid 2px #FCE38A;
+}
+.resume .right {
+  flex: 7;
+  padding: 20px;
+}
+.resume li {
+  list-style: none;
+}
+.resume a {
+  position: relative;
+  text-decoration: none;
+  padding: 15px 15px 15px 45px;
+  background-color: #FCE38A;
+  margin: 10px;
+  color: black;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+.resume a:hover {
+  background-color: #02C39A;
+  color: white;
+}
+.resume .skill {
+  padding-left: 0;
+}
+.resume .skill ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 0;
+}
+.resume .skill ul li {
+  width: 33%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0;
+  justify-content: center;
+}
+.resume .skill ul .circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.resume .skill ul h5 {
+  margin-top: 0px;
+}
+.resume .skill ul .outerCircle {
+  width: 60px;
+  height: 60px;
+  background-color: #FCE38A;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+}
+.resume .skill ul .outerCircle .p90 {
+  position: absolute;
+  background-color: rgba(0, 52, 89, 0.8);
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+.resume .skill ul .outerCircle .p180 {
+  position: absolute;
+  background-color: rgba(0, 52, 89, 0.8);
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.resume .skill ul .outerCircle .p270 {
+  position: absolute;
+  background-color: rgba(0, 52, 89, 0.8);
+  width: 50%;
+  height: 50%;
+  left: 0%;
+  top: 50%;
+}
+.resume .skill ul .outerCircle .p360 {
+  position: absolute;
+  background-color: rgba(0, 52, 89, 0.8);
+  width: 50%;
+  height: 50%;
+  left: 0%;
+  top: 0%;
+}
+.resume .skill ul .innerCircle {
+  width: 40px;
+  height: 40px;
+  background-color: #003459;
+  border-radius: 50%;
+  z-index: 10;
+  position: absolute;
+}
+.resume .pgSkill li {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.resume .pgSkill li .bar {
+  width: 150px;
+  height: 8px;
+  border: solid 2px #FCE38A;
+  border-radius: 4px;
+  position: absolute;
+  right: 0px;
+  background-color: rgba(0, 52, 89, 0.8);
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.resume .pgSkill li .bar .value {
+  width: 60%;
+  height: 8px;
+  background-color: #FCE38A;
+}
+.resume .pgSkill li .bar .value.w90 {
+  width: 90%;
+}
+.resume .pgSkill li .bar .value.w70 {
+  width: 70%;
+}
+.resume .pgSkill li .bar .value.w60 {
+  width: 60%;
+}
+.resume .pgSkill li .bar .value.w50 {
+  width: 50%;
+}
+.resume .experience {
+  width: 100%;
+  margin-top: 240px;
+}
+.resume .experience .itemUl {
+  width: 100%;
+  padding-left: 0;
+}
+.resume .experience .item {
+  display: flex;
+  width: 100%;
+}
+.resume .experience .item .count {
+  border-right: solid 3px #FCE38A;
+  width: 15%;
+  margin: 10px;
+}
+.resume .experience .item .count.one {
+  border-right: solid 3px #02C39A;
+}
+.resume .experience .item .count.two {
+  border-right: solid 3px #028090;
+}
+.resume .experience .item .count.three {
+  border-right: solid 3px #FCE38A;
+}
+.resume .decoration {
+  width: 300px;
+  height: 140px;
+  background: linear-gradient(135deg, #FCE38A, white);
+  border-radius: 70px 0px 0px 70px;
+  position: absolute;
+  right: 0;
+}
+
+.face {
+  width: 80px;
+  height: 80px;
+  background-color: #FCE38A;
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  transition: 0.5s;
+  margin-top: 180px;
+}
+.face .eye {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+}
+.face .eye.eyeLeft {
+  left: 5%;
+  top: 25%;
+}
+.face .eye.eyeRight {
+  right: 5%;
+  top: 25%;
+}
+.face .eye .eyeball {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.face .eye .eyeball.moveLeft {
+  transform: translate(80%, -50%);
+}
+.face .eye .eyeball.moveRight {
+  transform: translate(-120%, -50%);
+}
+.face .mouth {
+  width: 30px;
+  height: 10px;
+  background-color: #003459;
+  border-radius: 25% 25% 100% 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 10%;
+  overflow: hidden;
+}
+.face .hair {
+  background-color: black;
+  width: 50px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+}
+.face .hair.hairLeft {
+  left: 0%;
+  top: 0%;
+}
+.face .hair.hairRight {
+  right: 0%;
+  top: 0%;
+}
+.face .hair.hairTop {
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: -10%;
+}
+
+.thank {
+  position: absolute;
+  font-size: 50px;
+  color: #FCE38A;
+  margin-top: 200px;
+  right: 15%;
+}
+
+.pageLoading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #FCE38A;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s 0.5s;
+  pointer-events: none;
+}
+.pageLoading.complete {
+  opacity: 0;
+}
+.pageLoading.complete .fadeOut {
+  transform: scale(0.01) translate(-50%, 0%);
+}
+.pageLoading .face {
+  background-color: #003459;
+  margin-top: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.pageLoading .face .mouth {
+  background-color: #FCE38A;
+}
+.pageLoading .face .eyeball {
+  animation: moving 2s infinite alternate;
+}
+@keyframes moving {
+  0% {
+    transform: translate(-140%, -50%);
+  }
+  10% {
+    transform: translate(-140%, -50%);
+  }
+  90% {
+    transform: translate(60%, -50%);
+  }
+  100% {
+    transform: translate(60%, -50%);
+  }
+}
+.pageLoading .loading {
+  width: 200px;
+  height: 8px;
+  background-color: white;
+  margin-top: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pageLoading .loading .loadingBar {
+  width: 60%;
+  height: 100%;
+  background-color: #003459;
+}
